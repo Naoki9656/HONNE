@@ -8,11 +8,9 @@ class TopicsController < ApplicationController
   end
 
   def create
-    binding.pry
-
     @topic = Topic.new(topic_params)
     if @topic.save
-      redirect_to lists_new_path, notice: '投稿に成功しました'
+      redirect_to topics_index_path, notice: '投稿に成功しました'
     else
       flash.now[:alert] = "投稿に失敗しました"
       render :new
