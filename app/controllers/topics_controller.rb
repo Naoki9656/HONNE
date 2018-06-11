@@ -4,7 +4,7 @@ class TopicsController < ApplicationController
   end
 
   def index
-    @topics = Topic.all
+    @topics = Topic.paginate(page: params[:page],:per_page => 10).search(params[:search])
   end
 
   def create
@@ -16,6 +16,7 @@ class TopicsController < ApplicationController
       render :new
     end
   end
+
 
   private
   def topic_params

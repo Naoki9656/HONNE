@@ -1,25 +1,23 @@
 <div class="topic-index-wrapper">
   <div class="container">
-    <% @topics.each do |topic| %>
-      <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="topic-index-single">
-            <p class="topic-text">
-              <%= topic.title %>
-            </p>
-            <p class="topic-text">
-              <%= topic.description %>
-            </p>
-            <p class="topic-created-at-time">
-              <%= topic.created_at.strftime('%Y/%m/%d') %>
-            </p>
-          </div>
-        </div>
-      </div>
+
+    <% provide(:title, 'All topics') %>
+    <%= will_paginate %>
+
+    <!--  検索拡張機能  -->
+    <p>topic search</p>
+    <%= form_tag(topics_index_path, method: :get) do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag 'Search', :name => nil %>
     <% end %>
+
+    <ul class="users">
+      <%= render @topics %>
+    </ul>
+    <%= will_paginate %>
     <div class="row">
       <div class="col-md-offset-4 col-md-4">
-        <%= link_to 'コメントする', 'new', class: 'btn btn-block btn-white' %>
+        <%= link_to 'コメントする', new_topic_path, class: 'btn btn-block btn-white' %>
       </div>
     </div>
   </div>
