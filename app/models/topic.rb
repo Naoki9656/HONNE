@@ -1,6 +1,7 @@
 class Topic < ApplicationRecord
   validates :description, presence: true
   has_many :favorites
+  default_scope -> { order(created_at: :desc) }
 
   def self.search(search) #ここでのself.はUser.を意味する
     if search
