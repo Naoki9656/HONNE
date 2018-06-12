@@ -3,6 +3,8 @@ class Topic < ApplicationRecord
   has_many :favorites
   default_scope -> { order(created_at: :desc) }
 
+  acts_as_taggable
+
   def self.search(search) #ここでのself.はUser.を意味する
     if search
       where(['title LIKE ? OR description LIKE ?',"%#{search}%", "%#{search}%"]) #検索とnameの部分一致を表示。User.は省略
