@@ -14,6 +14,11 @@
             <%= f.text_area :description, class: 'form-control',rows: 10 %>
           </div>
 
+          <div class="form-group">
+            <%= f.label :tag_list, "タグ（カンマ区切り）" %><br>
+            <%= text_field_tag 'topic[tag_list]', @topic.tag_list.join(','), class: 'form-control' %>
+          </div>
+
           <%= f.submit '投稿', class: 'btn btn-white btn-block' %>
 
         <% end %>
