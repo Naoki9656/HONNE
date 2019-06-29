@@ -56,6 +56,9 @@ ActiveRecord::Schema.define(version: 20180612215218) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password"
+    t.string "password_confirmation"
+    t.string "password_digest"
   end
 
 end
