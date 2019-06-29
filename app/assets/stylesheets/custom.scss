@@ -5,6 +5,9 @@ h1, h2 {
 .text-white {
   color: #fff;
 }
+.text-black {
+  color: rgb(0,0,0);
+}
 
 .btn-white {
   color: black;
@@ -32,12 +35,11 @@ h1, h2 {
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: image-url("takibi.png");
+  background-image: image-url("umauma.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  background-color: #464646;
 }
 
 .top-hero-container {
@@ -50,6 +52,17 @@ h1, h2 {
   h2 {
     margin-bottom: 60px;
   }
+}
+
+.audio_button{
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.audio_button:hover{
+ 	cursor:pointer;
+ 	color:#f00;
 }
 
 .topic-index-wrapper {

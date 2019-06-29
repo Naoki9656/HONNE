@@ -1,11 +1,46 @@
 <div class="top-hero-wrapper text-center">
   <div class="container top-hero-container">
-    <h1 class="text-white">本音は俺、言える</h1>
-    <h2 class="text-white">その思い、あなただけではない</h2>
+    <h2 class="text-black">今日も1日お疲れ様です。</h2>
+    <h2 class="text-black">お疲れのあなたに爆笑を届けます</h2>
+    <h2 class="text-black"></h2>
     <div class="row">
       <div class="col-md-offset-4 col-md-4">
-        <%= link_to '一覧を見る', '/topics/index', class: 'btn btn-block btn-white' %>
+      <div class="audio_wrap">
+      <div class="audio_button">笑ってもらう</div>
+      <%= audio_tag("Waraigoe.mp3",id:"audio") %>
+    </div>
       </div>
     </div>
   </div>
 </div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+$(function () {
+  var audioBtn = $('.audio_button'),
+      audioWrap = $('.audio_wrap'),
+      audio = document.getElementById('audio');
+
+  audioBtn.on('click', function () {
+    if( audioWrap.hasClass('play') ) {
+      audio.pause();
+      audioWrap.removeClass('play');
+    } else {
+      audio.play();
+      audioWrap.addClass('play');
+    }
+  });
+
+  $(window).bind("focus",function (){
+    if( audioWrap.hasClass('play') ) {
+      audio.play();
+    } else {
+      audio.pause();
+      audioWrap.removeClass('play');
+    }
+  }).bind("blur",function (){
+    audio.pause();
+  });
+
+});
+</script>
