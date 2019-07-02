@@ -1,18 +1,25 @@
-<div class="top-hero-wrapper text-center">
-  <div class="container top-hero-container">
-    <h2 class="text-black">今日も1日お疲れ様です。</h2>
-    <h2 class="text-black">お疲れのあなたに爆笑を届けます</h2>
-    <h2 class="text-black"></h2>
-    <div class="row">
-      <div class="col-md-offset-4 col-md-4">
-      <div class="audio_wrap">
-      <div class="audio_button">笑ってもらう</div>
-      <%= audio_tag("Waraigoe.mp3",id:"audio") %>
-    </div>
+<body>
+  <div class="top-hero-wrapper text-center">
+    <div class="container top-hero-container">
+      <h2 class="text-black">今日も1日お疲れ様です。</h2>
+      <h2 class="text-black">不満愚痴怒りなんでも笑います。</h2>
+      <h2 class="text-black">ご自由にお書きください</h2>
+      <h2 class="text-black"></h2>
+      <div class="row">
+        <div class="col-md-offset-4 col-md-4">
+        <div class="audio_wrap">
+          <textarea name="name"></textarea>
+          <div class="audio_block">
+            <h3 class="audio_button">笑ってもらう</h3>
+            <%= audio_tag("Waraigoe.mp3",id:"audio") %>
+          </div>
+      </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</body>
+
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>

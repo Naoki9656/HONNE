@@ -1,12 +1,14 @@
 h1, h2 {
   font-weight: 100;
 }
-
+body{
+  background-image: image-url("umauma.jpg");
+}
 .text-white {
   color: #fff;
 }
-.text-black {
-  color: rgb(0,0,0);
+.text {
+  color: rgba(0,0,0,1);
 }
 
 .btn-white {
@@ -16,7 +18,7 @@ h1, h2 {
   padding-bottom: 15px;
   font-size: 20px;
   background-color: rgba(0,0,0,0.0);
-
+}
 .btn-black {
   color: black;
   border: 1px solid black;
@@ -24,45 +26,58 @@ h1, h2 {
   padding-bottom: 15px;
   font-size: 20px;
   background-color: rgba(0,0,100,0);
-
-
-
-  &:hover {
-    color: #fff;
-  }
 }
-}
+
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-image: image-url("umauma.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  z-index: 0;
 }
 
 .top-hero-container {
-  padding-top: 220px;
+  padding-top: 120px;
   h1 {
     font-size: 56px;
     margin-bottom: 20px;
   }
 
   h2 {
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
 }
-
-.audio_button{
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
+.audio_button {
+  margin-top:0px;
+margin: 0 auto;
+  width: 200px;
+  z-index: 1;
+  background-color: rgba(10,252,228,1);
+  border-radius: 1.5em;
+  font-size: 24px;
+  padding: 15px;/* 角丸 */
+  color: black;
+}
+textarea{
+  border: 2px solid #0a0;  /* 枠線 */
+  border-radius: 0.67em;   /* 角丸 */
+  background-color: snow;
+  resize: none;
+  width: 20em;             /* 横幅 */
+  height: 120px;
+  outline: 0;
+  margin-top: 30px;
 }
 
-.audio_button:hover{
+.audio_button:hover {
  	cursor:pointer;
- 	color:#f00;
+  background-color: rgba(11,171,189,1)
+}
+
+.audio_block{
+  padding-top:100px;
 }
 
 .topic-index-wrapper {
